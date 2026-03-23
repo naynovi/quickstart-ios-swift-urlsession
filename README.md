@@ -6,7 +6,7 @@ This page provides all the steps for integrating Approov into your app. Addition
 
 To follow this guide you should have received an onboarding email for a trial or paid Approov account.
 
-Note that the minimum requirement is iOS 12 and watchOS 9. You cannot use Approov in apps that support iOS versions older than this.
+Note that the minimum requirement is iOS 11 and watchOS 9. You cannot use Approov in apps that support iOS versions older than this.
 
 ## ADDING APPROOV SERVICE DEPENDENCY
 The Approov integration is available via the [`Swift Package Manager`](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app). This allows inclusion into the project by simply specifying a dependency in the `File -> Add Packages...` Xcode option if the project is selected:
@@ -23,7 +23,7 @@ Alternatively, use `cocoapods` and add the package dependencies similar to how t
 The `ApproovURLSession` class mimics the interface of the `URLSession` class provided by Apple but includes an additional Approov attestation calls. The simplest way to use the `ApproovURLSession` class is to find and replace all the `URLSession` construction calls with `ApproovURLSession`. 
 
 ```swift
-import ApproovURLSession
+import ApproovURLSessionPackage
 
 try! ApproovService.initialize("<enter-your-config-string-here>")
 let session = ApproovURLSession(URLSessionConfiguration.default)
@@ -57,7 +57,7 @@ To actually protect your APIs and/or secrets there are some further steps. Appro
 
 Note that it is possible to use both approaches side-by-side in the same app.
 
-See [REFERENCE](https://github.com/approov/quickstart-ios-swift-urlsession/blob/master/REFERENCE.md) for a complete list of all of the `ApproovService` methods.
+See [REFERENCE](https://github.com/approov/approov-service-urlsession/blob/main/REFERENCE.md) for a complete list of all of the `ApproovService` methods.
 
 ## DATA TASK PUBLISHER
 The version of [`dataTaskPublisher(for:)`](https://developer.apple.com/documentation/foundation/urlsession/3329708-datataskpublisher) provided in `URLSession` does not add Approov protection.
