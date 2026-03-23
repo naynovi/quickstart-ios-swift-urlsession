@@ -17,7 +17,7 @@
 import UIKit
 
 //*** UNCOMMENT THE LINE BELOW FOR APPROOV
-//import ApproovURLSession
+//import ApproovURLSessionPackage
 
 class ViewController: UIViewController {
     @IBOutlet weak var statusImageView: UIImageView!
