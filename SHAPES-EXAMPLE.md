@@ -69,10 +69,10 @@ Tokens for this domain will be automatically signed with the specific secret for
 
 ## MODIFY THE APP TO USE APPROOV
 
-Before using Approov you need to import the `ApproovURLSession` Service. In the `ViewController.swift` and/or `ContentView.swift` source file import the service module:
+Before using Approov you need to import the `ApproovURLSessionPackage` Service. In the `ViewController.swift` and/or `ContentView.swift` source file import the service module:
 
 ```swift
-import ApproovURLSession
+import ApproovURLSessionPackage
 ```
 
 Find the following line in `ViewController.swift` and `ContentView.swift` source file and uncomment it (commenting the previous definition):
