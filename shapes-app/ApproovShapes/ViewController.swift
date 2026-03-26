@@ -17,7 +17,7 @@
 import UIKit
 
 //*** UNCOMMENT THE LINE BELOW FOR APPROOV
-//import ApproovURLSession
+//import ApproovURLSessionPackage
 
 class ViewController: UIViewController {
     @IBOutlet weak var statusImageView: UIImageView!
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         //ApproovService.addSubstitutionHeader(header: "Api-Key", prefix: nil)
 
         //*** UNCOMMENT THE LINES BELOW FOR APPROOV USING INSTALLATION MESSAGE SIGNING
-        //ApproovService.setApproovInterceptorExtensions(
+        //ApproovService.setServiceMutator(
         //    ApproovDefaultMessageSigning().setDefaultFactory(
         //        ApproovDefaultMessageSigning.generateDefaultSignatureParametersFactory()))
     }

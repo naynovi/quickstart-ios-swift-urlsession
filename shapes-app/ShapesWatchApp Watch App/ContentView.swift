@@ -7,7 +7,7 @@
 
 import SwiftUI
 //*** UNCOMMENT THE LINE BELOW FOR APPROOV
-//import ApproovURLSession
+//import ApproovURLSessionPackage
 
 //*** COMMENT THE LINE BELOW IF USING APPROOV
 var defaultSession = URLSession(configuration: .default)
@@ -46,7 +46,7 @@ struct ContentView: View {
         //try! ApproovService.initialize(config: "<enter-your-config-string-here>")
         
         //*** UNCOMMENT THE LINES BELOW FOR APPROOV USING INSTALLATION MESSAGE SIGNING
-        //ApproovService.setApproovInterceptorExtensions(
+        //ApproovService.setServiceMutator(
         //    ApproovDefaultMessageSigning().setDefaultFactory(
         //        ApproovDefaultMessageSigning.generateDefaultSignatureParametersFactory()))
 
